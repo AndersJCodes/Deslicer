@@ -12,5 +12,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  base: 'deslicer/',
+  base: '/deslicer/', // Relativ sökväg för GitHub Pages
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
 })
