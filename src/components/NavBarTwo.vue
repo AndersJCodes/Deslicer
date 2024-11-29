@@ -12,7 +12,7 @@ const closeMenu = () => {
     <div class="nav-container">
       <!-- Logo -->
       <RouterLink class="logo" to="/" @click="closeMenu"
-        ><img src="./deslicer_logo.png" alt="Company Logo" class="logo"
+        ><img src="/deslicer_logo.png" alt="Company Logo" class="logo"
       /></RouterLink>
       <!-- Hamburger Checkbox -->
       <input class="checkbox" type="checkbox" id="menu-toggle" />
