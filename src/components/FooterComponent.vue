@@ -6,8 +6,8 @@ const contactInfo = {
 }
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com', icon: '/svg/linkedin.svg' },
-  { name: 'Twitter', href: 'https://twitter.com', icon: '/svg/x-social-media-white.svg' },
+  { name: 'LinkedIn', href: 'https://linkedin.com', icon: 'svg/linkedin.svg' },
+  { name: 'Twitter', href: 'https://twitter.com', icon: 'svg/x-social-media-white.svg' },
 ]
 </script>
 
