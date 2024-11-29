@@ -1,0 +1,25 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+  font-weight: normal;
+}
+
+main {
+  margin: 0 auto;
+}
+
+a,
+.white {
+  text-decoration: none;
+  color: var(--color-text-dark-bg);
+  transition: 0.4s;
+}
+
+/* @media (hover: hover) {
+  a:hover {
+    background-color:
+      #a6080843;
+  }
+} */
