@@ -67,10 +67,10 @@ const heroButtons = [
   { label: 'How it works', action: () => alert('How it works clicked!') },
 ]
 
-const icon = './svg/verified.svg'
+const icon = 'svg/verified.svg'
 const cards = [
   {
-    icon: './svg/sync.svg',
+    icon: 'svg/sync.svg',
     title: 'Onboard apps',
     paragraph:
       'Onboarding just a handful apps to a SIEM system demands significant time and resources. For companies managing hundreds or thousands, this process becomes a costly bottleneck that Deslicer can help automate.',
@@ -83,7 +83,7 @@ const cards = [
     buttonAction: () => alert('Card 1 clicked!'),
   },
   {
-    icon: './svg/monitor.svg',
+    icon: 'svg/monitor.svg',
     title: 'Uncover insights',
     paragraph:
       'Monitor your Splunk installation the same way you monitor your other software and increase the value of you SIEM installation.',
@@ -96,7 +96,7 @@ const cards = [
     buttonAction: () => alert('Card 2 clicked!'),
   },
   {
-    icon: './svg/system.svg',
+    icon: 'svg/system.svg',
     title: 'Manage and update',
     paragraph:
       'Automation is not limited to SIEM onboarding. Thanks to the Deslicer platform you can now also reduce the time it takes to manage the system and update it.',
