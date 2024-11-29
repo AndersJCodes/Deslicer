@@ -1,63 +1,3 @@
-<script setup lang="ts">
-import Hero from '../components/HeroImage.vue'
-import LogoContainer from '../components/LogoContainer.vue'
-import InlineContent from '@/components/InlineContent.vue'
-import CardComponent from '@/components/CardComponent.vue'
-import InlinecontentTwo from '@/components/InlinecontentTwo.vue'
-import QuoteComponent from '@/components/QuoteComponent.vue'
-
-const heroButtons = [
-  { label: 'Get in touch', action: () => alert('Get in touch!') },
-  { label: 'How it works', action: () => alert('How it works clicked!') },
-]
-
-const icon = './svg/verified.svg'
-const cards = [
-  {
-    icon: './svg/sync.svg',
-    title: 'Onboard apps',
-    paragraph:
-      'Onboarding just a handful apps to a SIEM system demands significant time and resources. For companies managing hundreds or thousands, this process becomes a costly bottleneck that Deslicer can help automate.',
-    features: [
-      { icon: icon, text: 'Getting data in' },
-      { icon: icon, text: 'Agent creation and validation' },
-      { icon: icon, text: 'Automated deployment' },
-    ],
-    buttonLabel: 'Learn More',
-    buttonAction: () => alert('Card 1 clicked!'),
-  },
-  {
-    icon: './svg/monitor.svg',
-    title: 'Uncover insights',
-    paragraph:
-      'Monitor your Splunk installation the same way you monitor your other software and increase the value of you SIEM installation.',
-    features: [
-      { icon: icon, text: 'SIEM system overview' },
-      { icon: icon, text: 'Error handling' },
-      { icon: icon, text: 'Process handling' },
-    ],
-    buttonLabel: 'Learn More',
-    buttonAction: () => alert('Card 2 clicked!'),
-  },
-  {
-    icon: './svg/system.svg',
-    title: 'Manage and update',
-    paragraph:
-      'Automation is not limited to SIEM onboarding. Thanks to the Deslicer platform you can now also reduce the time it takes to manage the system and update it.',
-    features: [
-      { icon: icon, text: 'Automated management' },
-      { icon: icon, text: 'Update agents' },
-    ],
-    buttonLabel: 'Read More',
-    buttonAction: () => alert('Card 2 clicked!'),
-  },
-]
-
-const handleLearnMore = () => {
-  console.log('Learn More button clicked')
-}
-</script>
-
 <template>
   <header>
     <Hero
@@ -113,6 +53,70 @@ const handleLearnMore = () => {
     />
   </main>
 </template>
+
+<script setup lang="ts">
+import Hero from '../components/HeroImage.vue'
+import LogoContainer from '../components/LogoContainer.vue'
+import InlineContent from '@/components/InlineContent.vue'
+import CardComponent from '@/components/CardComponent.vue'
+import InlinecontentTwo from '@/components/InlinecontentTwo.vue'
+import QuoteComponent from '@/components/QuoteComponent.vue'
+
+const heroButtons = [
+  { label: 'Get in touch', action: () => alert('Get in touch!') },
+  { label: 'How it works', action: () => alert('How it works clicked!') },
+]
+
+const icon = './svg/verified.svg'
+const cards = [
+  {
+    icon: './svg/sync.svg',
+    title: 'Onboard apps',
+    paragraph:
+      'Onboarding just a handful apps to a SIEM system demands significant time and resources. For companies managing hundreds or thousands, this process becomes a costly bottleneck that Deslicer can help automate.',
+    features: [
+      { icon: icon, text: 'Getting data in' },
+      { icon: icon, text: 'Agent creation and validation' },
+      { icon: icon, text: 'Automated deployment' },
+    ],
+    buttonLabel: 'Learn More',
+    buttonAction: () => alert('Card 1 clicked!'),
+  },
+  {
+    icon: './svg/monitor.svg',
+    title: 'Uncover insights',
+    paragraph:
+      'Monitor your Splunk installation the same way you monitor your other software and increase the value of you SIEM installation.',
+    features: [
+      { icon: icon, text: 'SIEM system overview' },
+      { icon: icon, text: 'Error handling' },
+      { icon: icon, text: 'Process handling' },
+    ],
+    buttonLabel: 'Learn More',
+    buttonAction: () => alert('Card 2 clicked!'),
+  },
+  {
+    icon: './svg/system.svg',
+    title: 'Manage and update',
+    paragraph:
+      'Automation is not limited to SIEM onboarding. Thanks to the Deslicer platform you can now also reduce the time it takes to manage the system and update it.',
+    features: [
+      { icon: icon, text: 'Automated management' },
+      { icon: icon, text: 'Update agents' },
+    ],
+    buttonLabel: 'Read More',
+    buttonAction: () => alert('Card 2 clicked!'),
+  },
+]
+
+const handlePrimaryAction = () => {
+  console.log('Primary action clicked')
+}
+
+const handleLearnMore = () => {
+  console.log('Learn More button clicked')
+}
+</script>
 
 <style>
 .background-color {
