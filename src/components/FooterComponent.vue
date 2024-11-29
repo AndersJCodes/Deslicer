@@ -16,7 +16,7 @@ const socialLinks = [
     <div class="footer-container">
       <!-- Branding Section -->
       <div class="footer-branding">
-        <img src="/logo_icon_deslicer_white.jpg" alt="Company Logo" class="footer-logo" />
+        <img src="./logo_icon_deslicer_white.jpg" alt="Company Logo" class="footer-logo" />
         <p class="footer-tagline">Accelerate SIEM data integration with AI</p>
       </div>
       <!-- Social Media -->

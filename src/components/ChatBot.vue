@@ -1,6 +1,6 @@
 <template>
   <div :class="['chat-container', { minimized: isMinimized }]">
-    <div class="chat-header" @click="toggleChat"><img src="/svg/chat.svg" alt="" /></div>
+    <div class="chat-header" @click="toggleChat"><img src="./svg/chat.svg" alt="" /></div>
     <div v-if="!isMinimized" class="chat-body">
       <div class="chat-messages" ref="chatMessages">
         <div
