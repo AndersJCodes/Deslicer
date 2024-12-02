@@ -88,6 +88,9 @@ withDefaults(defineProps<HeroImageProps>(), {
 
 .hero-content h1 {
   color: var(--vt-c-white);
+  font-size: 3.5rem;
+  max-width: 600px;
+  padding-bottom: 2rem;
 }
 
 .hero-paragraph {
@@ -101,7 +104,7 @@ withDefaults(defineProps<HeroImageProps>(), {
 }
 
 .hero-button {
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 1.5rem;
   /* font-size: 1rem; */
   font-weight: bold;
   border: none;

@@ -35,6 +35,7 @@ const props = defineProps({
 .location-section {
   padding: 6rem 2rem;
   background-color: #f8f8f8; /* Light gray */
+  color: var(--vt-c-black);
 }
 
 .location-container {

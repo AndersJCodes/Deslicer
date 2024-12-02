@@ -72,19 +72,20 @@ const props = defineProps({
 }
 
 .inline-header {
-  font-size: 2rem;
+  /*   font-size: 2rem; */
+  color: var(--vt-c-black);
   margin-bottom: 1rem;
 }
 
 .inline-text {
-  font-size: 1rem;
-  line-height: 1.6;
+  /*  font-size: 1rem; */
+  /* line-height: 1.6; */
   margin-bottom: 2rem;
 }
 
 .inline-button {
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  /* font-size: 1rem; */
   font-weight: bold;
   color: #ffffff;
   background-color: #ea580c;

@@ -1,3 +1,5 @@
+<!-- GitHub Copilot -->
+
 <template>
   <section class="inline" :style="{ backgroundColor: backgroundColor }">
     <div
@@ -10,53 +12,39 @@
       <div class="inline-content">
         <h2 class="inline-header">{{ header }}</h2>
         <p v-if="text" class="inline-text">{{ text }}</p>
-        <ul v-if="bulletList" class="inline-list">
-          <li v-for="(item, index) in bulletList" :key="index">{{ item }}</li>
-        </ul>
         <button v-if="buttonLabel" @click="buttonAction" class="inline-button">
           {{ buttonLabel }}
         </button>
       </div>
     </div>
+    <ul v-if="bulletList" class="inline-list">
+      <li v-for="(item, index) in bulletList" :key="index">{{ item }}</li>
+    </ul>
   </section>
 </template>
 
 <script setup lang="ts">
 import type { PropType } from 'vue'
 
-const props = defineProps({
-  image: {
-    type: String,
-    default: null, // Optional, if no image is provided
-  },
-  imagePosition: {
-    type: String as PropType<'left' | 'right'>,
-    default: 'left', // Determines the position of the image
-  },
-  header: {
-    type: String,
-    required: true,
-  },
-  text: {
-    type: String,
-    default: null, // Optional, if no text is provided
-  },
-  bulletList: {
-    type: Array as PropType<string[]>,
-    default: null, // Optional, if no bullet list is provided
-  },
-  buttonLabel: {
-    type: String,
-    default: null, // Optional, if no button is needed
-  },
-  buttonAction: {
-    type: Function as PropType<() => void>,
-    default: null, // Optional, if no button action is provided
-  },
-  backgroundColor: {
-    type: String,
-    default: '#e5e5e5', // Default light background color
-  },
+interface Props {
+  image?: string
+  imagePosition: 'left' | 'right'
+  header: string
+  text?: string
+  bulletList?: string[]
+  buttonLabel?: string
+  buttonAction?: () => void
+  backgroundColor: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  image: null,
+  imagePosition: 'left',
+  text: null,
+  bulletList: null,
+  buttonLabel: null,
+  buttonAction: null,
+  backgroundColor: '#e5e5e5',
 })
 </script>
 
@@ -72,11 +60,11 @@ const props = defineProps({
   max-width: 1080px;
   margin: 0 auto;
   gap: 2rem;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 0rem 2rem;
 }
 
 .inline-container.reverse-layout {
-  flex-direction: column-reverse;
+  /* Will reverse the order on large screens */
 }
 
 .inline-image {
@@ -88,24 +76,27 @@ const props = defineProps({
 
 .inline-content {
   text-align: left;
-  max-width: 1080px;
+  max-width: 600px; /* Adjusted to prevent excessive width */
   color: var(--vt-c-black-mute);
 }
 
 .inline-header {
   font-size: 2rem;
+  color: var(--vt-c-black-mute);
   margin-bottom: 1rem;
 }
 
 .inline-text {
-  font-size: 1rem;
-  line-height: 1.6;
+  /* font-size: 1rem; */
+  /*  line-height: 1.6; */
   margin-bottom: 2rem;
 }
 
 .inline-list {
+  color: var(--vt-c-black-mute);
   margin: 1rem 0;
-  padding-left: 1.5rem;
+  padding: 0 2rem 6rem 3rem;
+  list-style-type: disc;
 }
 
 .inline-list li {
@@ -133,6 +124,7 @@ const props = defineProps({
   .inline-container {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   .inline-container.reverse-layout {
@@ -147,6 +139,27 @@ const props = defineProps({
   .inline-content {
     flex: 1;
     text-align: left;
+    padding: 0 2rem;
+  }
+
+  .inline-list {
+    /* Position the bullet list below the image */
+    margin-top: 2rem;
+  }
+
+  /* Adjust the section layout to stack bullet list below image */
+  .inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ensure bullets take full width */
+  .inline-list {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1080px;
   }
 }
 </style>

@@ -16,11 +16,11 @@ import { ref } from 'vue'
 
 // Dummy logos
 const logos = ref([
-  { src: '../customerlogos/logoipsum-239.svg', alt: 'Logo 1' },
-  { src: '../customerlogos/logoipsum-260.svg', alt: 'Logo 2' },
-  { src: '../customerlogos/logoipsum-263.svg', alt: 'Logo 3' },
-  { src: '../customerlogos/logoipsum-264.svg', alt: 'Logo 4' },
-  { src: '../customerlogos/logoipsum-265.svg', alt: 'Logo 5' },
+  { src: 'customerlogos/logoipsum-239.svg', alt: 'Logo 1' },
+  { src: 'customerlogos/logoipsum-260.svg', alt: 'Logo 2' },
+  { src: 'customerlogos/logoipsum-263.svg', alt: 'Logo 3' },
+  { src: 'customerlogos/logoipsum-264.svg', alt: 'Logo 4' },
+  { src: 'customerlogos/logoipsum-265.svg', alt: 'Logo 5' },
 ])
 </script>
 

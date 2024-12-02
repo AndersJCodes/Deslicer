@@ -89,13 +89,14 @@ withDefaults(defineProps<Cardprops>(), {
 
 /* Title Styling */
 .card-title {
+  color: var(--vt-c-black-soft);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 /* Paragraph Styling */
 .card-paragraph {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: var(--vt-c-black-soft);
   margin-bottom: 1.5rem;
 }
@@ -111,7 +112,7 @@ withDefaults(defineProps<Cardprops>(), {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .feature-icon {

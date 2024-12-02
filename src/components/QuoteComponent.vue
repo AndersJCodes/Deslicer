@@ -113,7 +113,7 @@ const props = defineProps({
 }
 
 .quote-sub-header {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: #2c3e50;
   font-weight: 500;
   text-transform: uppercase;
@@ -128,8 +128,8 @@ const props = defineProps({
 }
 
 .quote-description {
-  font-size: 1rem;
-  line-height: 1.6;
+  /* font-size: 1rem; */
+  /* line-height: 1.6; */
   color: #2c3e50;
   margin-bottom: 1.5rem;
 }
