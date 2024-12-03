@@ -10,7 +10,7 @@ import Hero from '@/components/HeroImage.vue'
       subHeader="Our Mission"
       header="SIEM management for humans"
       paragraph="Focus on analysis and growth, instead of onboardings, support and updates."
-      image=".images/siem-automation-desclier-about-hero.jpg"
+      image="./images/siem-automation-desclier-about-hero.jpg"
     />
     <AboutTeam />
     <Chatbot />
