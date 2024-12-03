@@ -48,19 +48,19 @@ const team: TeamMember[] = [
     name: 'Roger Lindquist',
     role: 'Founder / CEO',
     bio: 'Roger is an experienced IT professional with over 25 years in various roles, including IT Manager, Architect, and Consultant, now specializing in infrastructure, security, and automation.',
-    image: './public/images/deslicer-roger-2.png', // Replace with actual image paths
+    image: 'images/deslicer-roger-2.png', // Replace with actual image paths
   },
   {
     name: 'Saikrishna Gundeti',
     role: 'Founder / CTO',
     bio: 'Saikrishna excels at aligning IT capabilities with business goals, drawing on over 15 years of experience in IT operations, data analytics, and automation. His expertise spans Splunk, AI/ML, and multi-cloud environments.',
-    image: './public/images/deslicer-saikrishna-2.png',
+    image: './images/deslicer-saikrishna-2.png',
   },
   {
     name: 'Daniel Young',
     role: 'Founder / CSO',
     bio: 'Daniel is a technology leader with a strong background in software engineering, operational intelligence, and strategic leadership. His vision has driven Deslicer’s growth and customer success.',
-    image: './public/images/deslicer-daniel-2.png',
+    image: './images/deslicer-daniel-2.png',
   },
 ]
 </script>
