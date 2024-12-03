@@ -139,13 +139,12 @@ const props = withDefaults(defineProps<Props>(), {
   .inline-content {
     flex: 1;
     text-align: left;
-    padding: 0 2rem;
   }
 
-  .inline-list {
-    /* Position the bullet list below the image */
+  /*   .inline-list {
     margin-top: 2rem;
-  }
+    margin-left: 2rem;
+  } */
 
   /* Adjust the section layout to stack bullet list below image */
   .inline {
