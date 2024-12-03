@@ -2,14 +2,14 @@
   <header>
     <Hero
       header="Accelerate SIEM data integration with AI"
-      image=".public/images/hero-3.jpg"
+      image="images/hero-3.jpg"
       :buttons="heroButtons"
     />
   </header>
   <main>
     <LogoContainer />
     <InlineContent
-      image=".public/images/services.png"
+      image="images/services.png"
       subHeader="The Deslicer Platform"
       header="More growth opportunities, less maintenance"
       text="The Deslicer platform helps you unlock the full potential of your SIEM system by semi-automating administrative tasks. From onboarding apps to maintenance and updates. Focus on what your SIEM does best - protect your company from threats."
@@ -30,7 +30,7 @@
       </div>
     </section>
     <InlinecontentTwo
-      image=".public/images/siem-expertise.jpg"
+      image="images/siem-expertise.jpg"
       imagePosition="right"
       header="Expertise to help optimize your SIEM system"
       text="While the Deslicer platform is our primary service, our consultants are also available to help optimize your SIEM system. We ensure you unlock the systems's full potential while managing costs effectively, offering strategic guidance at every step to align with your business goals."
@@ -49,7 +49,7 @@
       quote="We have hundreds of apps in need of onboarding to our Splunk installation. By investing in the Deslicer platform we can now onboard new software in hours rather than days and for a fraction of the cost!"
       name="Lex Luthor"
       company="Head of IT and AI Automation, Comapny X"
-      image=".public/images/siem-automate-ai-deslicer.jpg"
+      image="images/siem-automate-ai-deslicer.jpg"
     />
   </main>
 </template>
