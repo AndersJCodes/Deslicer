@@ -1,3 +1,5 @@
+<!-- GitHub Copilot -->
+
 <template>
   <section class="about-section">
     <!-- Vision and Mission Section -->
@@ -6,8 +8,8 @@
         <h2>Deslicer at a glance</h2>
         <p>
           We make your SIEM system more human, by letting the computer do the hard work of
-          onboarding, maintanance and updates. Now you can spend more time on insights, threat
-          defence and company growth.
+          onboarding, maintenance, and updates. Now you can spend more time on insights, threat
+          defense, and company growth.
         </p>
       </div>
       <div class="vision">
@@ -74,28 +76,25 @@ const team: TeamMember[] = [
 
 .vision-mission {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr; /* Default to single column for mobile */
   gap: 2em;
   margin-bottom: 3rem;
 }
 
 .vision-mission h2 {
-  /*  font-size: 1.5rem; */
   margin-bottom: 0.5rem;
 }
 
 .vision-mission p {
-  /* font-size: 1rem; */
-  /*  line-height: 1.5; */
+  /* Optional: Add specific styles if needed */
 }
 
 .team {
   padding: 4rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .team h2 {
-  /* font-size: 2rem; */
   margin-bottom: 2rem;
 }
 
@@ -131,5 +130,21 @@ const team: TeamMember[] = [
 
 .team-member .bio {
   font-size: 0.8em;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .vision-mission {
+    grid-template-columns: 1fr 1fr; /* Two columns for desktop */
+  }
+
+  .vision-mission .mission,
+  .vision-mission .vision {
+    /* Optional: Add specific styles for larger screens */
+  }
+
+  .vision-mission.reverse-layout {
+    /* If you have a reverse layout, handle it here */
+  }
 }
 </style>
