@@ -55,12 +55,12 @@
 </template>
 
 <script setup lang="ts">
-import Hero from '../components/HeroImage.vue'
-import LogoContainer from '../components/LogoContainer.vue'
+import Hero from '../components/TheHero.vue'
+import LogoContainer from '../components/TheLogo.vue'
 import InlineContent from '@/components/InlineContent.vue'
-import CardComponent from '@/components/CardComponent.vue'
-import InlinecontentTwo from '@/components/InlinecontentTwo.vue'
-import QuoteComponent from '@/components/QuoteComponent.vue'
+import CardComponent from '@/components/TheCard.vue'
+import InlinecontentTwo from '@/components/InlineContentTwo.vue'
+import QuoteComponent from '@/components/TheQuote.vue'
 
 const heroButtons = [
   { label: 'Get in touch', action: () => alert('Get in touch!') },

@@ -14,8 +14,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+interface Logo {
+  src: string
+  alt: string
+}
+
 // Dummy logos
-const logos = ref([
+const logos = ref<Logo[]>([
   { src: 'customerlogos/logoipsum-239.svg', alt: 'Logo 1' },
   { src: 'customerlogos/logoipsum-260.svg', alt: 'Logo 2' },
   { src: 'customerlogos/logoipsum-263.svg', alt: 'Logo 3' },

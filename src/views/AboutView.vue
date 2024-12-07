@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AboutTeam from '@/components/aboutTeam.vue'
+import AboutTeam from '@/components/TheTeam.vue'
 import Chatbot from '@/components/ChatBot.vue'
-import Hero from '@/components/HeroImage.vue'
+import Hero from '@/components/TheHero.vue'
 </script>
 
 <template>

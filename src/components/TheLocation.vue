@@ -19,16 +19,12 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  imageUrl: {
-    type: String,
-    required: true,
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-})
+interface LocationComponentProps {
+  imageUrl: string
+  location: string
+}
+
+defineProps<LocationComponentProps>()
 </script>
 
 <style scoped>

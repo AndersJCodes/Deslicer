@@ -12,34 +12,16 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue'
+interface InlineContentProps {
+  image: string
+  header: string
+  text: string
+  buttonLabel: string
+  buttonAction: () => void
+  backgroundColor: string
+}
 
-const props = defineProps({
-  image: {
-    type: String,
-    required: true,
-  },
-  header: {
-    type: String,
-    required: true,
-  },
-  text: {
-    type: String,
-    required: true,
-  },
-  buttonLabel: {
-    type: String,
-    required: true,
-  },
-  buttonAction: {
-    type: Function as PropType<() => void>,
-    required: true,
-  },
-  backgroundColor: {
-    type: String,
-    default: '#e5e5e5', // Default light background color
-  },
-})
+defineProps<InlineContentProps>()
 </script>
 
 <style scoped>

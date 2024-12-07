@@ -38,7 +38,6 @@ interface HeroImageProps {
   subHeader?: string
 }
 
-//Define props with type annotations and default values
 withDefaults(defineProps<HeroImageProps>(), {
   image: '',
   buttons: () => [] as Button[],

@@ -58,7 +58,7 @@
             </label>
           </div>
           <!-- Submit Button -->
-          <button type="submit" class="form-button">Get in touch</button>
+          <button type="submit" class="form-button">Send</button>
         </form>
       </div>
     </div>
@@ -68,23 +68,24 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 
-const props = defineProps({
-  title: {
-    type: String,
-    required: false,
-  },
-  description: {
-    type: String,
-    required: false,
-  },
-  backgroundImage: {
-    type: String,
-    required: false,
-  },
-})
+interface FormProps {
+  title: string
+  description: string
+  backgroundImage: string
+}
+
+interface FormData {
+  name: string
+  email: string
+  phone: string
+  message: string
+  privacy: boolean
+}
+
+defineProps<FormProps>()
 
 // Reactive form data object
-const formData = reactive({
+const formData = reactive<FormData>({
   name: '',
   email: '',
   phone: '',
@@ -232,6 +233,11 @@ textarea {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.form-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .form-button:hover {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Form from '@/components/FormComponent.vue'
+import Form from '@/components/TheForm.vue'
 import Location from '@/components/LocationComponent.vue'
 </script>
 

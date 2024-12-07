@@ -24,8 +24,6 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue'
-
 interface Props {
   image?: string
   imagePosition: 'left' | 'right'
@@ -37,15 +35,7 @@ interface Props {
   backgroundColor: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  image: null,
-  imagePosition: 'left',
-  text: null,
-  bulletList: null,
-  buttonLabel: null,
-  buttonAction: null,
-  backgroundColor: '#e5e5e5',
-})
+defineProps<Props>()
 </script>
 
 <style scoped>
@@ -61,10 +51,6 @@ const props = withDefaults(defineProps<Props>(), {
   margin: 0 auto;
   gap: 2rem;
   padding: 6rem 2rem 0rem 2rem;
-}
-
-.inline-container.reverse-layout {
-  /* Will reverse the order on large screens */
 }
 
 .inline-image {
@@ -131,6 +117,11 @@ const props = withDefaults(defineProps<Props>(), {
     flex-direction: row-reverse;
   }
 
+  .reverse-layout .form-info {
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+
   .inline-image {
     flex: 1;
     max-width: 50%;
@@ -140,11 +131,6 @@ const props = withDefaults(defineProps<Props>(), {
     flex: 1;
     text-align: left;
   }
-
-  /*   .inline-list {
-    margin-top: 2rem;
-    margin-left: 2rem;
-  } */
 
   /* Adjust the section layout to stack bullet list below image */
   .inline {

@@ -47,7 +47,7 @@ const toggleChat = () => {
 const askQuestion = async () => {
   if (question.value.trim() === '') return
 
-  // Add the user's question
+  // Adds the user's question
   messages.value.push({ text: question.value, isUser: true })
 
   try {
@@ -55,7 +55,7 @@ const askQuestion = async () => {
     const response = await fetch('https://yesno.wtf/api')
     const data = await response.json()
 
-    // Add the bot's response
+    // Adds the bot's response
     messages.value.push({
       text: data.answer,
       isUser: false,
@@ -165,7 +165,8 @@ watch(messages, () => {
 }
 
 .chat-message.user {
-  background-color: #fffbeb;
+  color: var(--vt-c-black-mute);
+  background-color: var(--vt-c-white-mute);
   align-self: flex-end;
 }
 

@@ -1,10 +1,4 @@
 <script setup lang="ts">
-const contactInfo = {
-  email: 'info@deslicer.com',
-  phone: '+123 456 7890',
-  address: '123 Innovation Road, Stockholm',
-}
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com', icon: 'svg/linkedin.svg' },
   { name: 'Twitter', href: 'https://twitter.com', icon: 'svg/x-social-media-white.svg' },
