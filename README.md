@@ -2,7 +2,9 @@
 
 Student: Anders Jacobson
 
-This project demonstrates various Vue 3 and TypeScript features as required for the course. Here's how each requirement was implemented:
+This project demonstrates various Vue 3 and TypeScript features as required for the course. below is how each requirement was implemented.
+
+to start the project simply run `npm install` to install the dependencies and then `npm run dev` to start the development server.
 
 ## Project summary
 
