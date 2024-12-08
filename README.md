@@ -6,6 +6,9 @@ This project demonstrates various Vue 3 and TypeScript features as required for 
 
 to start the project simply run `npm install` to install the dependencies and then `npm run dev` to start the development server.
 
+you can also find a hosted version if the site at:
+https://andersjcodes.github.io/deslicer/
+
 ## Project summary
 
 This project is a simple landing page for a business. It is a single page application that uses vue router to navigate between pages. It consists of three pages: Home, About, and Contact.
