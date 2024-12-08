@@ -6,7 +6,21 @@
     <!-- Content Overlay -->
     <div class="hero-content">
       <p v-if="subHeader" class="sub-header">{{ subHeader }}</p>
-      <h1>{{ header }}</h1>
+      <h1 ref="headerRef" class="hero-header">
+        <span v-for="(word, wordIndex) in header.split(' ')" :key="wordIndex" class="word">
+          <span
+            class="char"
+            v-for="(char, charIndex) in word"
+            :key="charIndex"
+            :style="{
+              animationDelay: `${wordIndex * 0.3 + charIndex * 0.04}s`,
+            }"
+          >
+            {{ char }}
+          </span>
+          <span v-if="wordIndex < header.split(' ').length - 1">&nbsp;</span>
+        </span>
+      </h1>
       <p v-if="paragraph" class="hero-paragraph">{{ paragraph }}</p>
       <div class="hero-buttons">
         <button
@@ -23,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import { withDefaults } from 'vue'
+import { withDefaults, onMounted, ref } from 'vue'
 
 interface Button {
   label: string
@@ -43,6 +57,15 @@ withDefaults(defineProps<HeroImageProps>(), {
   buttons: () => [] as Button[],
   paragraph: '',
   subHeader: '',
+})
+
+/* Hero text animation */
+const headerRef = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  if (headerRef.value) {
+    headerRef.value.classList.add('materialize')
+  }
 })
 </script>
 
@@ -91,6 +114,52 @@ withDefaults(defineProps<HeroImageProps>(), {
   max-width: 600px;
   padding-bottom: 2rem;
 }
+
+/* tilte animation */
+.hero-title {
+  position: relative;
+  overflow: hidden;
+}
+
+.char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(10px);
+  color: transparent;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.materialize .char {
+  animation: materialize 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes materialize {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+    color: transparent;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    color: inherit;
+    text-shadow: none;
+  }
+}
+
+.word {
+  display: inline-block;
+}
+
+.hero-header {
+  word-wrap: break-word;
+}
+
+/* end of title animation */
 
 .hero-paragraph {
   color: var(--vt-c-white-soft);

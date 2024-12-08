@@ -26,8 +26,10 @@
               type="email"
               placeholder="example@gmail.com"
               v-model="formData.email"
+              :class="{ invalid: !isEmailValid && formData.email !== '' }"
               required
             />
+            <span v-if="emailError" class="error-message">{{ emailError }}</span>
           </div>
           <!-- Phone Input -->
           <div class="form-group">
@@ -66,7 +68,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, computed } from 'vue'
 
 interface FormProps {
   title: string
@@ -91,6 +93,21 @@ const formData = reactive<FormData>({
   phone: '',
   message: '',
   privacy: false,
+})
+
+//Real time email validation
+const isEmailEmpty = computed(() => formData.email.trim() === '')
+
+const isEmailValid = computed(() => {
+  if (isEmailEmpty.value) return true
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(formData.email)
+})
+
+const emailError = computed(() => {
+  if (isEmailEmpty.value) return 'Email is required'
+  if (!isEmailValid.value) return 'Invalid email format'
+  return ''
 })
 
 // Handle form submission
@@ -242,6 +259,18 @@ textarea {
 
 .form-button:hover {
   background-color: #1b2937;
+}
+
+/* Email validation */
+.invalid {
+  border-color: #dc3545;
+  background-color: #fff;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
 }
 
 /* Media query for desktop view */

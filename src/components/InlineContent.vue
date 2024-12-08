@@ -18,7 +18,7 @@ interface InlineContentProps {
   text: string
   buttonLabel: string
   buttonAction: () => void
-  backgroundColor: string
+  backgroundColor?: string
 }
 
 defineProps<InlineContentProps>()
@@ -27,6 +27,7 @@ defineProps<InlineContentProps>()
 <style scoped>
 .inline {
   width: 100%;
+  background-color: #e5e5e5;
 }
 
 .inline-container {
@@ -44,6 +45,7 @@ defineProps<InlineContentProps>()
   max-width: 600px;
   object-fit: cover;
   border-radius: 16px;
+  border: 0px solid;
 }
 
 .inline-content {
